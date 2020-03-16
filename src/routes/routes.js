@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const attendanceCtrl = require('./../controllers/attendance');
 
-router.post('/registerRules', attendanceCtrl.register);
+router.post('/registerOnlyDate', attendanceCtrl.registerOnlyDate);
+router.post('/registerDaily', attendanceCtrl.registerDaily);
+router.post('/registerWeekly', attendanceCtrl.registerWeekly);
 router.post('/deleteRules', attendanceCtrl.delete);
 router.get('/getScheduledTimes', attendanceCtrl.getScheduledTimes);
 router.get('/getAvailableTimesByInterval', attendanceCtrl.getAvailableTimesByInterval);
