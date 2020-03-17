@@ -4,6 +4,14 @@
       "id": "49qh3jk7tvdpji",
       "date": "2015-03-25T12:00:00Z",
       "interval": {
+        "startTime": "11:00",
+        "endTime": "12:00"
+      }
+    },
+    {
+      "id": "49qdvak7vaodo2",
+      "date": "2015-03-25T12:00:00Z",
+      "interval": {
         "startTime": "10:00",
         "endTime": "12:00"
       }

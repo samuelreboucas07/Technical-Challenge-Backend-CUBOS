@@ -7,20 +7,28 @@ const moment = MomentRange.extendMoment(Moment);
 
 module.exports = {
     async registerOnlyDate(req, res, next){
-        if(req.app.db.get('setTimes').find({date: req.body.date}).value() != undefined)
-        {
-            req.app.db.get('setTimes')
-            .find({date: req.body.date})
-            .assign({interval: interval.push(req.body.interval)})
-            .value()
-        } else{
+        //SAVE IN ONLY ARRAY MANY INTERVALS, DOES NOT LEAVE OPTIMIZED DELETE.
+
+        // if(req.app.db.get('setTimes').find({date: req.body.date}).value() != undefined)
+        // {
+        //     const setTimes = req.app.db.get('setTimes')
+        //                      .find({date: req.body.date})
+        //                      .value()
+                        
+        //                 setTimes.interval.push(req.body.interval)
+                        
+        //                 req.app.db.get('setTimes')
+        //                 .find({date: req.body.date})
+        //                 .assign({interval:  setTimes.interval})
+        //                 .write()
+        // } else{
             req.app.db.get('setTimes')
             .push({id: uniqid(), 
                 date: req.body.date, 
                 interval: req.body.interval
                 })
             .write()
-        }
+        // }
         res.json({status: 'Horário cadastrado com sucesso'})
 
     },
@@ -34,7 +42,12 @@ module.exports = {
     },
 
     async delete (req, res, next){
-
+        const consultationSchedule = req.app.db.get('setTimes')
+                                    .filter({date: req.params.date})
+                                    .value()
+        console.log(consultationSchedule)
+        
+        res.json({status: 'Horário removido'})
     },
 
     async getScheduledTimes (req, res, next){
