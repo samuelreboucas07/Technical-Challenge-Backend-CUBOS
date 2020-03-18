@@ -1,20 +1,27 @@
 {
   "setTimes": [
     {
-      "id": "49qh3jk7tvdpji",
-      "date": "2015-03-25T12:00:00Z",
-      "interval": {
-        "startTime": "11:00",
-        "endTime": "12:00"
-      }
+      "id": "49q3ozk7wh57n1",
+      "date": "25-03-2019",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "weekly": []
     },
     {
-      "id": "49qdvak7vaodo2",
-      "date": "2015-03-25T12:00:00Z",
-      "interval": {
-        "startTime": "10:00",
-        "endTime": "12:00"
-      }
+      "id": "49q470k7whhos8",
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "daily": true,
+      "weekly": []
+    },
+    {
+      "id": "49q60vk7witbia",
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "weekly": [
+        "Monday",
+        "Sunday"
+      ]
     }
   ]
 }
