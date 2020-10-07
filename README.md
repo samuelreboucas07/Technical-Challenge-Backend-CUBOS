@@ -34,9 +34,9 @@ npm start
 
 ## Endpoints
 
-* /registerOnlyDate - Cadastra regra de horário disponível para data específica
-* /registerDaily - Cadastra regra de horário disponível diariamente
-* /registerWeekly -  Cadastra regra de horário disponível semanal
+* /registerOnlyDate - Cadastra regra de horário para atendimento em data específica
+* /registerDaily - Cadastra regra de horário para atendimento diariamente
+* /registerWeekly -  Cadastra regra de horário para atendimento semanal
 * /deleteById/:id - Exclui regra cadastrada
 * /getScheduledTimes - Lista todos horários cadastrados
 * /getAvailableTimesByInterval/:startDate/:endDate - Lista de horário cadastrados em um intervalo de tempo
