@@ -35,7 +35,7 @@ npm start
 ## Endpoints
 
 * /registerOnlyDate - Cadastra regra de horário para atendimento em data específica
-* /registerDaily - Cadastra regra de horário para atendimento diariamente
+* /registerDaily - Cadastra regra de horário para atendimento diário
 * /registerWeekly -  Cadastra regra de horário para atendimento semanal
 * /deleteById/:id - Exclui regra cadastrada
 * /getScheduledTimes - Lista todos horários cadastrados
